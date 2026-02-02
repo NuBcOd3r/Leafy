@@ -14,6 +14,9 @@ app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 
 // Conexión a Mongo
+const dns = require('node:dns');   
+dns.setServers(['8.8.8.8', '8.8.4.4']);
+
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("Mongo conectado"))
   .catch(err => console.error(err));
@@ -101,6 +104,13 @@ app.post("/api/login", async (req, res) => {
     res.status(500).json({ error: "Error en login" });
   }
 });
+
+//Routes
+const lecturasRoutes = require("./routes/lecturas");
+app.use("/api/lecturas", lecturasRoutes);
+
+app.use("/api/imagenes", require("./routes/imagenes"));
+
 
 // Servidor
 app.listen(3000, () => {

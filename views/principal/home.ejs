@@ -10,56 +10,388 @@
 
     <main class="main-content">
         <div class="container-fluid">
-            <div class="welcome-section">
-                <h1 class="welcome-title">Bienvenido al Sistema de Monitoreo Ambiental</h1>
-                <p class="welcome-subtitle">Dashboard principal de Leafy</p>
-            </div>
-
-            <div class="row g-4 mt-4">
-                <div class="col-md-4">
-                    <div class="stat-card">
-                        <div class="stat-icon bg-primary">
-                            <i class="bi bi-thermometer-half"></i>
+            
+            <!-- HERO SECTION -->
+            <section class="hero-section">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <div class="hero-content">
+                            <span class="hero-badge">
+                                <i class="bi bi-shield-check me-2"></i>
+                                Sistema Profesional de Monitoreo
+                            </span>
+                            <h1 class="hero-title">
+                                Monitoreo Inteligente con <span class="text-gradient">Leafy</span>
+                            </h1>
+                            <p class="hero-description">
+                                Controla y optimiza las condiciones ambientales de tus espacios con tecnología IoT de última generación. 
+                                Lecturas en tiempo real, alertas automáticas y análisis histórico para tomar las mejores decisiones.
+                            </p>
+                            <div class="hero-buttons">
+                                <a href="#caracteristicas" class="btn btn-primary-custom">
+                                    <i class="bi bi-rocket-takeoff me-2"></i>
+                                    Explorar Características
+                                </a>
+                                <a href="#aplicaciones" class="btn btn-outline-custom">
+                                    <i class="bi bi-play-circle me-2"></i>
+                                    Ver Aplicaciones
+                                </a>
+                            </div>
                         </div>
-                        <div class="stat-info">
-                            <h3>Temperatura</h3>
-                            <p class="stat-value">24.5°C</p>
-                            <small class="text-muted">Última lectura hace 5 min</small>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="hero-image">
+                            <div class="floating-card card-1">
+                                <i class="bi bi-thermometer-half"></i>
+                                <div>
+                                    <small>Temperatura</small>
+                                    <strong>24.5°C</strong>
+                                </div>
+                            </div>
+                            <div class="floating-card card-2">
+                                <i class="bi bi-droplet-half"></i>
+                                <div>
+                                    <small>Humedad</small>
+                                    <strong>68%</strong>
+                                </div>
+                            </div>
+                            <div class="floating-card card-3">
+                                <i class="bi bi-lightbulb"></i>
+                                <div>
+                                    <small>Luminosidad</small>
+                                    <strong>450 lux</strong>
+                                </div>
+                            </div>
+                            <div class="hero-main-image">
+                                <i class="bi bi-cpu"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="col-md-4">
-                    <div class="stat-card">
-                        <div class="stat-icon bg-success">
-                            <i class="bi bi-moisture"></i>
+            <!-- CARACTERÍSTICAS PRINCIPALES -->
+            <section id="caracteristicas" class="features-section">
+                <div class="section-header">
+                    <span class="section-badge">CARACTERÍSTICAS</span>
+                    <h2 class="section-title">¿Por qué elegir Leafy?</h2>
+                    <p class="section-subtitle">
+                        Tecnología de punta para el monitoreo ambiental profesional
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon icon-primary">
+                                <i class="bi bi-clock-history"></i>
+                            </div>
+                            <h3 class="feature-title">Monitoreo en Tiempo Real</h3>
+                            <p class="feature-description">
+                                Visualiza las condiciones ambientales al instante con actualizaciones cada 5 segundos.
+                            </p>
                         </div>
-                        <div class="stat-info">
-                            <h3>Humedad</h3>
-                            <p class="stat-value">68%</p>
-                            <small class="text-muted">Última lectura hace 5 min</small>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon icon-success">
+                                <i class="bi bi-bell"></i>
+                            </div>
+                            <h3 class="feature-title">Alertas Inteligentes</h3>
+                            <p class="feature-description">
+                                Recibe notificaciones automáticas cuando los valores superen los umbrales configurados.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon icon-warning">
+                                <i class="bi bi-graph-up-arrow"></i>
+                            </div>
+                            <h3 class="feature-title">Análisis Histórico</h3>
+                            <p class="feature-description">
+                                Consulta el historial completo de lecturas con gráficos interactivos y reportes detallados.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="feature-card">
+                            <div class="feature-icon icon-info">
+                                <i class="bi bi-cloud-check"></i>
+                            </div>
+                            <h3 class="feature-title">Acceso Remoto</h3>
+                            <p class="feature-description">
+                                Monitorea desde cualquier lugar con conexión a internet, en cualquier dispositivo.
+                            </p>
                         </div>
                     </div>
                 </div>
+            </section>
 
-                <div class="col-md-4">
-                    <div class="stat-card">
-                        <div class="stat-icon bg-warning">
-                            <i class="bi bi-brightness-high"></i>
+            <!-- APLICACIONES -->
+            <section id="aplicaciones" class="applications-section">
+                <div class="section-header">
+                    <span class="section-badge">APLICACIONES</span>
+                    <h2 class="section-title">Soluciones para Cada Necesidad</h2>
+                    <p class="section-subtitle">
+                        Leafy se adapta a múltiples industrias y sectores
+                    </p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="application-card">
+                            <div class="app-image app-invernadero">
+                                <i class="bi bi-flower3"></i>
+                            </div>
+                            <div class="app-content">
+                                <h3 class="app-title">
+                                    <i class="bi bi-bank me-2"></i>
+                                    Invernaderos
+                                </h3>
+                                <p class="app-description">
+                                    Controla temperatura, humedad y luminosidad para optimizar el crecimiento de tus cultivos. 
+                                    Maximiza la producción y reduce pérdidas con monitoreo 24/7.
+                                </p>
+                                <ul class="app-benefits">
+                                    <li><i class="bi bi-check-circle-fill me-2"></i>Control climático preciso</li>
+                                    <li><i class="bi bi-check-circle-fill me-2"></i>Optimización de recursos</li>
+                                    <li><i class="bi bi-check-circle-fill me-2"></i>Mayor rendimiento</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="stat-info">
-                            <h3>Luminosidad</h3>
-                            <p class="stat-value">450 lux</p>
-                            <small class="text-muted">Última lectura hace 5 min</small>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="application-card">
+                            <div class="app-image app-incubadora">
+                                <i class="bi bi-egg"></i>
+                            </div>
+                            <div class="app-content">
+                                <h3 class="app-title">
+                                    <i class="bi bi-thermometer-sun me-2"></i>
+                                    Incubadoras de Aves
+                                </h3>
+                                <p class="app-description">
+                                    Mantén las condiciones ideales para la incubación. Monitoreo constante de temperatura y humedad 
+                                    para garantizar una tasa de eclosión óptima.
+                                </p>
+                                <ul class="app-benefits">
+                                    <li><i class="bi bi-check-circle-fill me-2"></i>Precisión en incubación</li>
+                                    <li><i class="bi bi-check-circle-fill me-2"></i>Alertas en tiempo real</li>
+                                    <li><i class="bi bi-check-circle-fill me-2"></i>Mayor tasa de éxito</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4">
+                        <div class="application-card">
+                            <div class="app-image app-almacen">
+                                <i class="bi bi-boxes"></i>
+                            </div>
+                            <div class="app-content">
+                                <h3 class="app-title">
+                                    <i class="bi bi-building me-2"></i>
+                                    Almacenes y Bodegas
+                                </h3>
+                                <p class="app-description">
+                                    Protege tus productos sensibles con monitoreo ambiental continuo. Ideal para farmacéuticas, 
+                                    alimentos y productos químicos.
+                                </p>
+                                <ul class="app-benefits">
+                                    <li><i class="bi bi-check-circle-fill me-2"></i>Cumplimiento normativo</li>
+                                    <li><i class="bi bi-check-circle-fill me-2"></i>Prevención de pérdidas</li>
+                                    <li><i class="bi bi-check-circle-fill me-2"></i>Trazabilidad completa</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
+
+            <!-- BENEFICIOS -->
+            <section class="benefits-section">
+                <div class="row align-items-center">
+                    <div class="col-lg-5">
+                        <div class="benefits-visual">
+                            <div class="benefit-circle circle-1">
+                                <i class="bi bi-piggy-bank"></i>
+                                <span>Ahorro de costos</span>
+                            </div>
+                            <div class="benefit-circle circle-2">
+                                <i class="bi bi-speedometer2"></i>
+                                <span>Eficiencia</span>
+                            </div>
+                            <div class="benefit-circle circle-3">
+                                <i class="bi bi-shield-check"></i>
+                                <span>Seguridad</span>
+                            </div>
+                            <div class="benefit-circle circle-center">
+                                <i class="bi bi-trophy"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="benefits-content">
+                            <span class="section-badge">BENEFICIOS</span>
+                            <h2 class="section-title mb-4">Ventajas Competitivas de Leafy</h2>
+                            
+                            <div class="benefit-item">
+                                <div class="benefit-number">01</div>
+                                <div class="benefit-text">
+                                    <h4>Reduce Costos Operativos</h4>
+                                    <p>Optimiza el uso de recursos energéticos y previene pérdidas por condiciones inadecuadas.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-number">02</div>
+                                <div class="benefit-text">
+                                    <h4>Aumenta la Productividad</h4>
+                                    <p>Mantén las condiciones óptimas de manera constante para maximizar rendimientos.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-number">03</div>
+                                <div class="benefit-text">
+                                    <h4>Toma Decisiones Informadas</h4>
+                                    <p>Accede a datos históricos y reportes para identificar patrones y oportunidades de mejora.</p>
+                                </div>
+                            </div>
+
+                            <div class="benefit-item">
+                                <div class="benefit-number">04</div>
+                                <div class="benefit-text">
+                                    <h4>Tranquilidad y Control Total</h4>
+                                    <p>Monitorea remotamente y recibe alertas instantáneas ante cualquier anomalía.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ESTADÍSTICAS -->
+            <section class="stats-section">
+                <div class="row text-center g-4">
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box">
+                            <div class="stat-icon">
+                                <i class="bi bi-speedometer"></i>
+                            </div>
+                            <h3 class="stat-number" data-target="99.9">0</h3>
+                            <p class="stat-label">% Uptime</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box">
+                            <div class="stat-icon">
+                                <i class="bi bi-clock"></i>
+                            </div>
+                            <h3 class="stat-number" data-target="5">0</h3>
+                            <p class="stat-label">Segundos de actualización</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box">
+                            <div class="stat-icon">
+                                <i class="bi bi-graph-up"></i>
+                            </div>
+                            <h3 class="stat-number" data-target="100">0</h3>
+                            <p class="stat-label">% Precisión</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-md-3">
+                        <div class="stat-box">
+                            <div class="stat-icon">
+                                <i class="bi bi-shield-fill-check"></i>
+                            </div>
+                            <h3 class="stat-number" data-target="24">0</h3>
+                            <p class="stat-label">Horas de monitoreo</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA FINAL -->
+            <section class="cta-section">
+                <div class="cta-content">
+                    <h2 class="cta-title">¿Listo para transformar tu monitoreo ambiental?</h2>
+                    <p class="cta-description">
+                        Comienza a utilizar Leafy hoy y descubre cómo la tecnología puede optimizar tus procesos.
+                    </p>
+                    <a href="#" class="btn btn-cta">
+                        <i class="bi bi-arrow-right-circle me-2"></i>
+                        Comenzar Ahora
+                    </a>
+                </div>
+            </section>
+
         </div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/home.js"></script>
+    
+    <script>
+        // Animación de números en estadísticas
+        function animateNumbers() {
+            const stats = document.querySelectorAll('.stat-number');
+            
+            stats.forEach(stat => {
+                const target = parseFloat(stat.getAttribute('data-target'));
+                const duration = 2000;
+                const increment = target / (duration / 16);
+                let current = 0;
+                
+                const updateNumber = () => {
+                    current += increment;
+                    if (current < target) {
+                        stat.textContent = Math.floor(current);
+                        requestAnimationFrame(updateNumber);
+                    } else {
+                        stat.textContent = target % 1 === 0 ? target : target.toFixed(1);
+                    }
+                };
+                
+                updateNumber();
+            });
+        }
+
+        // Intersection Observer para activar animaciones
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateNumbers();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            observer.observe(statsSection);
+        }
+
+        // Smooth scroll para los enlaces
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+
 </body>
 
 </html>

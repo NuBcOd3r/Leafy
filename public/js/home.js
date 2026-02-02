@@ -1,8 +1,13 @@
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', function (e) {
-        document.querySelectorAll('.nav-item').forEach(item => {
-            item.classList.remove('active');
-        });
-        this.parentElement.classList.add('active');
-    });
+document.addEventListener("DOMContentLoaded", () => {
+    const nombre = localStorage.getItem("nombre");
+    if (nombre) {
+        document.getElementById("userName").innerText = nombre;
+    }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const role = localStorage.getItem("role");
+    if (role) {
+        document.getElementById("role").innerText = role;
+    }
 });

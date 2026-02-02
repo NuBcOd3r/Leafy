@@ -1,20 +1,20 @@
 <nav class="main-navbar">
     <div class="container-fluid">
         <ul class="nav-menu">
-            <li class="nav-item active">
-                <a href="home" class="nav-link">
+            <li class="nav-item">
+                <a href="/home" class="nav-link">
                     <i class="bi bi-house-door me-2"></i>
                     Inicio
                 </a>
             </li>
             <li class="nav-item">
-                <a href="monitoreo" class="nav-link">
+                <a href="/monitoreo" class="nav-link">
                     <i class="bi bi-display me-2"></i>
                     Monitoreo
                 </a>
             </li>
             <li class="nav-item">
-                <a href="#" class="nav-link">
+                <a href="/historial" class="nav-link">
                     <i class="bi bi-clock-history me-2"></i>
                     Historial de Lecturas
                 </a>
@@ -22,3 +22,14 @@
         </ul>
     </div>
 </nav>
+
+<script>
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function (e) {
+            document.querySelectorAll('.nav-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            this.parentElement.classList.add('active');
+        });
+    });
+</script>

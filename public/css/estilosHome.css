@@ -514,3 +514,19 @@ body {
 .bg-warning {
     background-color: var(--accent-gold) !important;
 }
+
+.stat-card {
+  border-radius: 15px;
+  border: none;
+}
+
+.stat-icon {
+  width: 55px;
+  height: 55px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
