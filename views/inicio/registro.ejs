@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('../layouts/head') %>
+
+<body>
+    <div class="outer-card">
+        <div class="image-section">
+            <div class="image-content">
+                <i class="bi bi-tropical-storm"></i>
+                <h2>Leafy</h2>
+                <p>Monitoreo y Gestión Ambiental</p>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <div class="login-container">
+        <div class="login-header">
+            <i class="bi bi-leaf"></i>
+            <h1>Leafy</h1>
+            <p>Sistema de Monitoreo Ambiental</p>
+        </div>
+        
+        <div class="login-body">
+            <div class="alert alert-success" id="successAlert" role="alert">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                <span id="alertMessage"></span>
+            </div>
+            
+            <div class="alert alert-danger" id="errorAlert" role="alert">
+                <i class="bi bi-exclamation-circle-fill me-2"></i>
+                <span id="errorMessage"></span>
+            </div>
+
+            <form id="loginForm" name="loginForm">
+                <div class="mb-3">
+                    <label for="cedula" class="form-label">
+                        <i class="fa-regular fa-id-badge"></i> Cedula
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa-regular fa-id-badge"></i>
+                        </span>
+                        <input type="text" class="form-control" id="cedula" name="cedula"  placeholder="201230123" oninput="soloNumeros(this);" onkeyup="ConsultarNombre();">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="nombreCompleto" class="form-label">
+                        <i class="fa-regular fa-user"></i> Nombre Completo
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa-regular fa-user"></i>
+                        </span>
+                        <input type="text" class="form-control" id="nombreCompleto" name="nombreCompleto" placeholder="Juan Perez" readonly>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">
+                        <i class="fa-regular fa-envelope"></i> Correo Electrónico
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa-regular fa-envelope"></i>
+                        </span>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">
+                        <i class="fa-solid fa-lock"></i> Contraseña
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                        <input type="password" class="form-control" id="pass" name="pass" placeholder="••••••••">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">
+                        <i class="fa-solid fa-lock"></i> Confirmar Contraseña
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                            <i class="fa-solid fa-lock"></i>
+                        </span>
+                        <input type="password" class="form-control" id="confirmarPass" name="confirmarPass" placeholder="••••••••">
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="role" class="form-label">
+                        <i class="fa-solid fa-shield"></i> Rol
+                    </label>
+                    <div class="input-group">
+                        <span class="input-group-text">
+                        <i class="fa-solid fa-shield"></i>
+                        </span>
+                        <select class="form-select" id="role" name="role" required>
+                        <option value="">Seleccione un rol</option>
+                        <option value="User">Usuario</option>
+                        <option value="Admin">Administrador</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button type="button" onclick="registro()" class="btn btn-login w-100">
+                    <i class="bi bi-box-arrow-in-right me-2"></i> Registrarse 
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../layouts/jsRegistro') %>
+
+</body>
+</html>
