@@ -38,6 +38,10 @@ app.get("/monitoreo", (req, res) => {
   res.render("principal/monitoreo", { title: "Monitoreo", user: null });
 });
 
+app.get("/historial", (req, res) => {
+  res.render("principal/historial", { title: "Historial", user: null });
+});
+
 // API´s
 const bcrypt = require("bcryptjs");
 const Usuario = require("./models/usuario");

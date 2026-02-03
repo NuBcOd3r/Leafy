@@ -10,33 +10,38 @@ document.addEventListener("DOMContentLoaded", async () => {
     cards.innerHTML = "";
 
     lecturas.forEach((l, index) => {
-
+      // --- Carrusel ---
       carousel.innerHTML += `
         <div class="carousel-item ${index === 0 ? "active" : ""}">
           <img 
             src="/api/imagenes/${l.imagen_id}" 
-            class="d-block w-100 rounded"
+            class="d-block w-100" 
+            style="height: 400px; object-fit: cover; border-radius: 15px;"
             alt="Lectura"
           >
         </div>
       `;
 
+      // --- Cards compactas para que no se corten ---
       cards.innerHTML += `
-        <div class="col-12">
-          <div class="card shadow-sm border-0">
-            <div class="card-body">
-              <small class="text-muted">
-                ${new Date(l.createdAt).toLocaleString()}
-              </small>
-
-              <div class="d-flex justify-content-between mt-2">
-                <span>🌡️ Temperatura</span>
-                <strong>${l.temperatura} °C</strong>
+        <div class="col-12 mb-3">
+          <div class="card border-0 shadow-sm" style="border-radius: 12px; overflow: hidden;">
+            <div class="card-body p-3">
+              <div style="font-size: 0.75rem; color: #6c757d; margin-bottom: 8px; display: flex; justify-content: space-between;">
+                <span>📅 ${new Date(l.createdAt).toLocaleDateString()}</span>
+                <span>⏰ ${new Date(l.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
               </div>
 
-              <div class="d-flex justify-content-between">
-                <span>💧 Humedad</span>
-                <strong>${l.humedad} %</strong>
+              <div style="display: flex; gap: 10px;">
+                <div style="flex: 1; background: #fff5f5; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #ffe3e3;">
+                  <div style="color: #dc3545; font-size: 1.2rem; font-weight: 800; line-height: 1;">${l.temperatura}°C</div>
+                  <div style="font-size: 0.6rem; text-transform: uppercase; color: #a3525a; font-weight: 700; margin-top: 4px;">Temp</div>
+                </div>
+
+                <div style="flex: 1; background: #f0f7ff; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #e1efff;">
+                  <div style="color: #0d6efd; font-size: 1.2rem; font-weight: 800; line-height: 1;">${l.humedad}%</div>
+                  <div style="font-size: 0.6rem; text-transform: uppercase; color: #527da3; font-weight: 700; margin-top: 4px;">Humedad</div>
+                </div>
               </div>
             </div>
           </div>
