@@ -6,7 +6,7 @@ router.get("/:id", async (req, res) => {
   try {
     const bucket = new mongoose.mongo.GridFSBucket(
       mongoose.connection.db,
-      { bucketName: "imagenes" }
+      { bucketName: "fs" }
     );
 
     const imageId = new mongoose.Types.ObjectId(req.params.id);
