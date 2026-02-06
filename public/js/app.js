@@ -71,3 +71,43 @@ async function registro() {
     });
   }
 }
+
+async function agregarInforme() {
+  const informe = document.getElementById("informe").value;
+  try {
+    const res = await fetch("/api/informe", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ informe})
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      Swal.fire({
+        icon: "error",
+        title: "Error",
+        text: data.error || "Ocurrió un error",
+        confirmButtonColor: "#d33"
+      });
+      return;
+    }
+
+    Swal.fire({
+      icon: "success",
+      title: "Informe Agregado!",
+      text: "Informe agregegado correctamente",
+      confirmButtonColor: "#2d6a4f"
+    }).then(() => {
+      window.location.href = "historial";
+    });
+
+  } catch (error) {
+    Swal.fire({
+      icon: "error",
+      title: "Error de servidor",
+      text: "No se pudo conectar con el servidor",
+      confirmButtonColor: "#d33"
+    });
+  }
+}

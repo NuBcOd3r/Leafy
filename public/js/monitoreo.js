@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     cards.innerHTML = "";
 
     lecturas.forEach((l, index) => {
-      // --- Carrusel ---
+      const fecha = new Date(l.fechaHora);
       carousel.innerHTML += `
         <div class="carousel-item ${index === 0 ? "active" : ""}">
           <img 
@@ -21,15 +21,13 @@ document.addEventListener("DOMContentLoaded", async () => {
           >
         </div>
       `;
-
-      // --- Cards compactas para que no se corten ---
       cards.innerHTML += `
         <div class="col-12 mb-3">
           <div class="card border-0 shadow-sm" style="border-radius: 12px; overflow: hidden;">
             <div class="card-body p-3">
               <div style="font-size: 0.75rem; color: #6c757d; margin-bottom: 8px; display: flex; justify-content: space-between;">
-                <span>📅 ${new Date(l.createdAt).toLocaleDateString()}</span>
-                <span>⏰ ${new Date(l.createdAt).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
+                <span>📅 ${fecha.toLocaleDateString()}</span>
+                <span>⏰ ${fecha.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</span>
               </div>
 
               <div style="display: flex; gap: 10px;">

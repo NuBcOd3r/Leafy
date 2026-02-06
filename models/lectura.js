@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
+const ObjectId = mongoose.Schema.Types.ObjectId;
 
 const lecturaSchema = new mongoose.Schema({
+  _id: ObjectId,
   temperatura: Number,
   humedad: Number,
 
@@ -9,9 +11,8 @@ const lecturaSchema = new mongoose.Schema({
     required: true
   },
 
-  createdAt: {
-    type: Date,
-    default: Date.now
+  fechaHora: {
+    type: Date
   }
 });
 

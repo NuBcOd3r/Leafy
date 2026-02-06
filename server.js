@@ -42,6 +42,10 @@ app.get("/historial", (req, res) => {
   res.render("principal/historial", { title: "Historial", user: null });
 });
 
+app.get("/detalles/:id", (req, res) => {
+  res.render("principal/detalleLecturas", { title: "Historial", user: null });
+});
+
 // API´s
 const bcrypt = require("bcryptjs");
 const Usuario = require("./models/usuario");
@@ -109,10 +113,7 @@ app.post("/api/login", async (req, res) => {
   }
 });
 
-//Routes
-const lecturasRoutes = require("./routes/lecturas");
-app.use("/api/lecturas", lecturasRoutes);
-
+app.use("/api/lecturas", require("./routes/lecturas"));
 app.use("/api/imagenes", require("./routes/imagenes"));
 
 
