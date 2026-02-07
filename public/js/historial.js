@@ -17,6 +17,13 @@ document.addEventListener("DOMContentLoaded", async () => {
                         <div style="font-size: 0.9rem; font-weight: 500;">${fecha.toLocaleDateString()}</div>
                         <div style="font-size: 0.8rem; color: #6c757d;">${fecha.toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})}</div>
                     </td>
+                    <td style="text-align: center; font-weight: bold; color: #0dc9fd;">
+                        ${
+                            l.motorActivo
+                            ? `<span class="badge bg-danger">Activo</span>`
+                            : `<span class="badge bg-success">Inactivo</span>`
+                        }
+                    </td>
                     <td style="text-align: center;">
                         <div style="display: flex; gap: 8px; justify-content: center;">
                             <a href="detalles/${l._id}" 

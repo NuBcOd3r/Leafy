@@ -5,6 +5,7 @@ const lecturaSchema = new mongoose.Schema({
   _id: ObjectId,
   temperatura: Number,
   humedad: Number,
+  motorActivo: Boolean,
 
   imagen_id: {
     type: mongoose.Schema.Types.ObjectId,

@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
           <img 
             src="/api/imagenes/${l.imagen_id}" 
             class="d-block w-100" 
-            style="height: 400px; object-fit: cover; border-radius: 15px;"
+            style="height: 430px; object-fit: cover; border-radius: 15px;"
             alt="Lectura"
           >
         </div>
@@ -39,6 +39,20 @@ document.addEventListener("DOMContentLoaded", async () => {
                 <div style="flex: 1; background: #f0f7ff; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #e1efff;">
                   <div style="color: #0d6efd; font-size: 1.2rem; font-weight: 800; line-height: 1;">${l.humedad}%</div>
                   <div style="font-size: 0.6rem; text-transform: uppercase; color: #527da3; font-weight: 700; margin-top: 4px;">Humedad</div>
+                </div>
+
+                <div style="flex: 1; background: #f5fff5; padding: 10px; border-radius: 8px; text-align: center; border: 1px solid #e1efff;">
+                  <div style="font-size: 1.2rem; font-weight: 800; line-height: 1;">
+                    ${
+                      l.motorActivo
+                        ? `<span class="badge bg-danger">Activo</span>`
+                        : `<span class="badge bg-success">Inactivo</span>`
+                    }
+                  </div>
+
+                  <div style="font-size: 0.6rem; text-transform: uppercase; color: #527da3; font-weight: 700; margin-top: 4px;">
+                    Ventilador
+                  </div>
                 </div>
               </div>
             </div>
